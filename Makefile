@@ -5,7 +5,7 @@ CXX      = ./clang++
 CXXFLAGS = $(CFLAGS) -std=c++11
 
 LDFLAGS  = -L.
-LDLIBS   = -lwolfssl -lFuzzer
+LDLIBS   = -lwolfssl # -lFuzzer
 
 PYTHON   = python2
 
