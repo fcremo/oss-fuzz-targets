@@ -49,3 +49,9 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t sz)
     wolfSSL_Cleanup();
     return 0;
 }
+
+int main(int argc, char** argv) {
+    char buf[1024 * 16];
+    int bytes_read = read(STDIN, &buf, sizeof(buf));
+    return LLVMFuzzerTestOneInput(buf, bytes_read)
+}
