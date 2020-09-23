@@ -27,7 +27,7 @@
 
 #define WC_MAX_FUZZ_INPUT_SZ 25000
 
-/* testing wolfSSL_CTX_use_certificate_buffer with PEM as the filetype*/
+/* testing wolfSSL_CTX_use_certificate_buffer with DER as the filetype*/
 
 int LLVMFuzzerTestOneInput(const uint8_t *data, size_t sz)
 {
@@ -43,7 +43,7 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t sz)
 
     ctx = wolfSSL_CTX_new(wolfTLSv1_2_server_method());
 
-    wolfSSL_CTX_load_verify_buffer(ctx, data, sz, SSL_FILETYPE_PEM);
+    wolfSSL_CTX_load_verify_buffer(ctx, data, sz, SSL_FILETYPE_ASN1);
 
     wolfSSL_CTX_free(ctx);
     wolfSSL_Cleanup();

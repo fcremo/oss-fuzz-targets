@@ -1,3 +1,13 @@
+# wolfSSL harness for AFL[++]
+
+This is a fork of [github.com/wolfSSL/oss-fuzz-targets](https://github.com/wolfSSL/oss-fuzz-targets)
+which:
+
+- removes libFuzzer in favour of AFL
+- targets DER and not PEM
+
+The original README follows.
+
 Fuzz Targets
 ============
 
