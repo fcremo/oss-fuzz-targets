@@ -1,5 +1,5 @@
 CC       = afl-clang-fast
-CFLAGS   = -g -fsanitize=address,array-bounds,null,return,shift -fsanitize-coverage=trace-pc-guard -I.
+CFLAGS   = -g -fsanitize=array-bounds,null,return,shift -fsanitize-coverage=trace-pc-guard -I.
 
 CXX      = afl-clang-fast++
 CXXFLAGS = $(CFLAGS) -std=c++11
